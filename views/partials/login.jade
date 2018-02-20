@@ -1,0 +1,50 @@
+mixin login()
+	div.loginBlock
+		div.background-shadow
+		div.center
+			div.loginArea.cf
+				div.whysignup
+					h2 What is Remarkdd?
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae tortor rhoncus, aliquam sem sed, euismod quam. Curabitur dictum, mi ullamcorper tincidunt fermentum, tortor dolor fringilla sem, at malesuada enim enim in tortor. Praesent vel imperdiet dolor. In tellus urna, finibus ut ornare vitae, ultricies eu est. Mauris ipsum mauris, molestie et lobortis et, eleifend in lacus. Proin vitae erat neque. Vivamus tellus nulla, imperdiet ornare tincidunt vitae, tempus vitae orci. Donec maximus efficitur est, ac ornare lacus. Sed imperdiet eros massa, vitae commodo purus fringilla a. Integer a orci at risus molestie tempor a non risus. Aliquam viverra urna nibh, ut blandit dolor pretium eu. Donec aliquet lacus dolor, facilisis iaculis lorem hendrerit at. Praesent in nisi eros. Morbi dignissim urna urna, eu porttitor tellus porta ut.
+
+
+				//"users_guid", "users_email", "users_password", "users_datecreated", "users_username", "users_fname", "users_lname", "users_verifycation", "users_activated",
+				div.sign-up
+					h2 signup
+					form(name="myForm", action="{{location}}", method="post" ng-controller="createAccount", ng-submit="submit()")
+						input(id='email', type='email', ng-model="email", name='email', placeholder='Email', required)
+						span.error(ng-show="myForm.email.$error.required") Required!
+						span.error(ng-show="myForm.email.$error.email") Not valid email!
+						br
+						input(id='password', ng-model="password", type='password', placeholder="Password", name='password', ng-maxlength="24" ng-minlength="6", required)
+						span.error(ng-show="myForm.password.$error.minlength") too short
+						span.error(ng-show="myForm.password.$error.maxlength") too long
+						span.error(ng-show="myForm.password.$error.required") Required!
+						br
+						input(id='username', ng-model="username", type='text', placeholder="Username", name='username', ng-maxlength="24" ng-minlength="2", required)
+						span.error(ng-show="myForm.username.$error.minlength") too short
+						span.error(ng-show="myForm.username.$error.maxlength") too long
+						span.error(ng-show="myForm.username.$error.required") Required!
+						br
+						span
+							a.more-options(href="javascript:void(0)") More Options
+						span.options
+							input(id='fname', ng-model="fname", type='text', placeholder="First Name", name='fname', ng-maxlength="24")
+							span.error(ng-show="myForm.fname.$error.maxlength") too long
+							br
+							input(id='lname', ng-model="lname", type='text', placeholder="Last Name", name='lname', ng-maxlength="24")
+							span.error(ng-show="myForm.lname.$error.maxlength") too long
+							br
+							input(id='pnum', ng-model="pnum", type='number', placeholder="Phone Number", name='pnum')
+							br
+						input(type='submit', value='sign up')
+				div.login
+					h2 Login
+					form(action='/login' method='post' target='_self')
+						input(type='text' name='email' placeholder= "Email")
+						br
+						input(type='password' name='password' placeholder="Password")
+						br
+						input(type='submit' value='submit')
+				div.closeBtn
+					a(href="#") &#10006;

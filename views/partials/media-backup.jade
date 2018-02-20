@@ -1,0 +1,119 @@
+mixin media-mid()
+	div.media-section.media-all.col-3
+		div.center.cf
+			h1 this appears when logged out
+			div.col1
+				div.media-item-list(ng-repeat="item in media  | filter: query | filter: filters | filter: ads | limitTo: limit | orderBy: sort:false" ng-if="$index % 3 == 0")
+					div.media-item
+						div.image(style="background:url('{{item.posts_img}}') no-repeat center; background-size: cover; ")
+							img(ng-src="{{item.posts_img}}")
+							h3.title(style="top: {{item.posts_y}}%; left: {{item.posts_x}}%;") {{item.posts_name}}
+						div.info.cf
+							div.cf
+								span.left
+									a(href="#") test {{item.posts_section}}
+								span.left
+									img(src="icon-person.png")
+									a(href="/{{item.users_username | slugify}}", target="_self") {{item.users_username}}
+								span.right
+									img(src="icon-comment.png")
+									p  {{item.posts_comments}}
+								span.right
+									img(src="icon-love.png")
+									p  {{item.posts_love}}
+					div.ad(ng-if="$index % 7 == 0")
+						div.media-item(ng-repeat="item in media  | filter: query | filter: filters | filter: {posts_ad:'true'} | limitTo: limit | orderBy: sort:false" ng-if="$parent.$index / 7 == $index ") 
+							img.ad-image(src="cloud.png")
+							div.image(style="background:url('{{item.posts_img}}') no-repeat center; background-size: cover; ")
+								img(ng-src="{{item.posts_img}}")
+								h3.title(style="top: {{item.posts_y}}%; left: {{item.posts_x}}%;") {{item.posts_name}}
+							div.info.cf
+								div.cf
+									span.left
+										a(href="#") test {{item.posts_section}}
+									span.left
+										img(src="icon-person.png")
+										a(href="/{{item.users_username | slugify}}", target="_self") {{item.users_username}}
+									span.right
+										img(src="icon-comment.png")
+										p  {{item.posts_comments}}
+									span.right
+										img(src="icon-love.png")
+										p  {{item.posts_love}}
+			div.col2
+				div.media-item-list(ng-repeat="item in media  | filter: query | filter: filters | filter: ads | limitTo: limit | orderBy: sort:false" ng-if="$index % 3 == 1")
+					div.media-item
+						div.image(style="background:url('{{item.posts_img}}') no-repeat center; background-size: cover; ")
+							img(ng-src="{{item.posts_img}}")
+							h3.title(style="top: {{item.posts_y}}%; left: {{item.posts_x}}%;") {{item.posts_name}}
+						div.info.cf
+							div.cf
+								span.left
+									a(href="#") test {{item.posts_section}}
+								span.left
+									img(src="icon-person.png")
+									a(href="/{{item.users_username | slugify}}", target="_self") {{item.users_username}}
+								span.right
+									img(src="icon-comment.png")
+									p  {{item.posts_comments}}
+								span.right
+									img(src="icon-love.png")
+									p  {{item.posts_love}}
+					div.ad(ng-if="$index % 7 == 0")
+						div.media-item(ng-repeat="item in media  | filter: query | filter: filters | filter: {posts_ad:'true'} | limitTo: limit | orderBy: sort:false" ng-if="$parent.$index / 7 == $index ") 
+							img.ad-image(src="cloud.png")
+							div.image(style="background:url('{{item.posts_img}}') no-repeat center; background-size: cover; ")
+								img(ng-src="{{item.posts_img}}")
+								h3.title(style="top: {{item.posts_y}}%; left: {{item.posts_x}}%;") {{item.posts_name}}
+							div.info.cf
+								div.cf
+									span.left
+										a(href="#") test {{item.posts_section}}
+									span.left
+										img(src="icon-person.png")
+										a(href="/{{item.users_username | slugify}}", target="_self") {{item.users_username}}
+									span.right
+										img(src="icon-comment.png")
+										p  {{item.posts_comments}}
+									span.right
+										img(src="icon-love.png")
+										p  {{item.posts_love}}
+			div.col3
+				div.media-item-list(ng-repeat="item in media  | filter: query | filter: filters | filter: ads | limitTo: limit | orderBy: sort:false" ng-if="$index % 3 == 2")
+					div.media-item
+						div.image(style="background:url('{{item.posts_img}}') no-repeat center; background-size: cover; ")
+							img(ng-src="{{item.posts_img}}")
+							h3.title(style="top: {{item.posts_y}}%; left: {{item.posts_x}}%;") {{item.posts_name}}
+						div.info.cf
+							div.cf
+								span.left
+									a(href="#") test {{item.posts_section}}
+								span.left
+									img(src="icon-person.png")
+									a(href="/{{item.users_username | slugify}}", target="_self") {{item.users_username}}
+								span.right
+									img(src="icon-comment.png")
+									p  {{item.posts_comments}}
+								span.right
+									img(src="icon-love.png")
+									p  {{item.posts_love}}
+					div.ad(ng-if="$index % 7 == 0")
+						div.media-item(ng-repeat="item in media  | filter: query | filter: filters | filter: {posts_ad:'true'} | limitTo: limit | orderBy: sort:false" ng-if="$parent.$index / 7 == $index ") 
+							img.ad-image(src="cloud.png")
+							div.image(style="background:url('{{item.posts_img}}') no-repeat center; background-size: cover; ")
+								img(ng-src="{{item.posts_img}}")
+								h3.title(style="top: {{item.posts_y}}%; left: {{item.posts_x}}%;") {{item.posts_name}}
+							div.info.cf
+								div.cf
+									span.left
+										a(href="#") test {{item.posts_section}}
+									span.left
+										img(src="icon-person.png")
+										a(href="/{{item.users_username | slugify}}", target="_self") {{item.users_username}}
+									span.right
+										img(src="icon-comment.png")
+										p  {{item.posts_comments}}
+									span.right
+										img(src="icon-love.png")
+										p  {{item.posts_love}}
+			a#addMore(href="javascript:void(0)" ng-click="incrementLimit()") more

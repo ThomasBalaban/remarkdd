@@ -1,0 +1,679 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* custom resets */
+a {
+  text-decoration: none;
+  color: #000; }
+
+/* ---- CLEARFIX ---- */
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+input, select, option, label, input:focus, select:focus, option:focus, input[type='submit'], input[type='password'], input[type='text'], input[type='email'], a.btn, .loginBlock .loginArea .whysignup, .loginBlock .loginArea .sign-up, .loginBlock .loginArea .login, #loginPopup .loginBlock .center, .media-section .media-item, .media-section .media-item .image, .media-section .media-item div.info span, .media-section .media-item img, .featured, .featured .discussions .media-item .discus img, .featured .gallary .image {
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+  -moz-border-bottom-left-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  -moz-border-bottom-right-radius: 4px; }
+
+body, html {
+  height: 101%; }
+
+body {
+  font-size: 18px;
+  background: url("22-degree-fabric-light.png") #fff; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "bebas_neuebold", "Arial Black", Helvetica, Arial, sans-serif, Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, Droid Sans Fallback, -apple-system, ".SFNSDisplay-Regular", Heiti SC, Microsoft Yahei, Segoe UI;
+  text-rendering: optimizeLegibility;
+  color: #121312;
+  font-weight: bold;
+  font-size: 32px;
+  font-size: 2rem; }
+
+form {
+  position: relative; }
+
+input, select, option, label, input:focus, select:focus, option:focus {
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif, Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, Droid Sans Fallback, -apple-system, ".SFNSDisplay-Regular", Heiti SC, Microsoft Yahei, Segoe UI;
+  font-size: 20px;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  padding: 2px 7px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  letter-spacing: 1px; }
+
+select, option, input[type='submit'] {
+  background: #039EF1;
+  letter-spacing: 1px;
+  color: #fdfcfc;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+input[type='submit'] {
+  padding: 3px;
+  min-width: 110px;
+  min-height: 40px; }
+
+input[type='password'], input[type='text'], input[type='email'] {
+  border: 1px solid #fff;
+  margin-bottom: 5px; }
+
+select:hover, option:focus, input[type='submit']:focus {
+  background: #ffed68; }
+
+p, span, a, li {
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif, Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, Droid Sans Fallback, -apple-system, ".SFNSDisplay-Regular", Heiti SC, Microsoft Yahei, Segoe UI;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  text-align: justify;
+  letter-spacing: 1px; }
+
+p, span, li {
+  color: #121312; }
+
+a {
+  color: #039EF1; }
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 68px;
+  font-size: 4.25rem;
+  font-weight: 500; }
+
+h2 {
+  font-size: 65px;
+  font-size: 4.0625rem; }
+
+.btn-signup, .btn-login {
+  background: #039EF1;
+  background: -webkit-radial-gradient(#0f352e, #0b5136);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+a.btn {
+  color: #fff;
+  border: 2px solid #d47bf5;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+.btn-signup {
+  border-right: 2px solid #039EF1;
+  padding-right: 10px; }
+
+.btn-login {
+  padding-left: 10px; }
+
+.btn-signup, .btn-login {
+  font-size: 26px;
+  font-size: 1.625rem;
+  display: inline-block;
+  height: 28px;
+  margin-bottom: 8px; }
+
+body .main-content {
+  padding-top: 88px; }
+
+header {
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  padding: 2px 0;
+  overflow: hidden;
+  background: #B003F1 url("top-r.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  box-sizing: border-box; }
+  header .header {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px; }
+    header .header .remarkdd {
+      float: left; }
+      header .header .remarkdd img {
+        display: inline-block;
+        padding: 5px 0 2px 0;
+        height: 70px; }
+    header .header h1 {
+      margin: 0 auto;
+      width: 315px;
+      color: #fdfcfc;
+      top: 4px;
+      position: relative; }
+    header .header ul {
+      float: right; }
+      header .header ul > li {
+        float: left; }
+        header .header ul > li a {
+          font-size: 16px;
+          font-size: 1rem;
+          padding: 8px 15px;
+          display: inline-block;
+          line-height: 44px;
+          line-height: 2.75rem; }
+        header .header ul > li ul {
+          display: none; }
+      header .header ul > li:hover {
+        background: #c8cccc; }
+        header .header ul > li:hover a {
+          color: #ffed68; }
+        header .header ul > li:hover ul {
+          display: block;
+          position: absolute;
+          background: url("22-degree-fabric-light.png") #fff;
+          padding: 10px;
+          padding: 0.625rem; }
+          header .header ul > li:hover ul li {
+            display: block; }
+          header .header ul > li:hover ul a {
+            color: #039EF1; }
+          header .header ul > li:hover ul li:hover {
+            background: #c8cccc; }
+            header .header ul > li:hover ul li:hover a {
+              color: #ffed68; }
+      header .header ul > li:hover ul.last {
+        right: 300px;
+        text-align: right;
+        padding: 0px;
+        border: 1px solid #c8cccc;
+        margin-top: 1px; }
+        header .header ul > li:hover ul.last > a {
+          display: none; }
+        header .header ul > li:hover ul.last li a {
+          display: none; }
+        header .header ul > li:hover ul.last li a.link {
+          display: block;
+          line-height: 46px;
+          line-height: 2.875rem; }
+    header .header div.loggedout {
+      float: right;
+      padding: 6px 0px;
+      margin-top: 10px; }
+      header .header div.loggedout h3 {
+        display: inline-block;
+        top: 14px;
+        font-size: 51px;
+        font-size: 3.1875rem;
+        line-height: 19px;
+        line-height: 1.1875rem;
+        position: relative; }
+      header .header div.loggedout a {
+        margin-top: 10px; }
+      header .header div.loggedout a:first-child {
+        margin-right: 20px; }
+      header .header div.loggedout .navsignup {
+        background: #8e06c1; }
+
+.col-1 .col1 {
+  width: 100%;
+  margin-right: 0px; }
+
+.col-2 .col1, .col-2 .col2 {
+  width: 49%;
+  margin-right: 2%;
+  float: left; }
+.col-2 .col2 {
+  margin-right: 0px; }
+
+.col-3 .col1, .col-3 .col2, .col-3 .col3 {
+  width: 32%;
+  margin-right: 2%;
+  float: left; }
+.col-3 .col3 {
+  margin-right: 0px; }
+
+.center {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px; }
+
+@media only screen and (min-width: 1280px) {
+  .tablet, .mobile {
+    display: none; } }
+@media only screen and (max-width: 1280px) {
+  .tablet {
+    display: block; }
+
+  .fullscreen, .midscreen, .mobile {
+    display: none; } }
+@media only screen and (max-width: 680px) {
+  .mobile {
+    display: block; }
+
+  .fullscreen, .midscreen, .tablet {
+    display: none; } }
+.active {
+  background: #B003F1;
+  color: white;
+  box-shadow: -7px -15px 0px -9px #039EF1 inset; }
+
+/* Login Area */
+.loginBlock {
+  background: #292929;
+  border-bottom: 5px solid #B003F1; }
+  .loginBlock .loginArea {
+    padding: 30px 0; }
+    .loginBlock .loginArea .whysignup, .loginBlock .loginArea .sign-up, .loginBlock .loginArea .login {
+      width: 24%;
+      background: #fdfcfc;
+      border: 1px solid #eceded;
+      padding: 20px;
+      padding: 1.25rem;
+      -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      float: left;
+      box-sizing: border-box; }
+      .loginBlock .loginArea .whysignup h3, .loginBlock .loginArea .sign-up h3, .loginBlock .loginArea .login h3 {
+        margin: -2px 0 10px 0;
+        font-size: 24px;
+        font-size: 1.5rem; }
+    .loginBlock .loginArea .whysignup {
+      width: 48%;
+      margin-right: 2%; }
+    .loginBlock .loginArea .sign-up {
+      margin-right: 2%; }
+      .loginBlock .loginArea .sign-up .more-options {
+        display: block;
+        margin-bottom: 20px; }
+        .loginBlock .loginArea .sign-up .more-options a {
+          font-size: 14px;
+          font-size: 0.875rem;
+          font-weight: bold; }
+      .loginBlock .loginArea .sign-up .options {
+        display: none; }
+      .loginBlock .loginArea .sign-up input {
+        width: 100%;
+        padding: 7px 18px;
+        margin-bottom: 20px;
+        border: 1px solid #eceded;
+        font-size: 14px;
+        font-size: 0.875rem; }
+      .loginBlock .loginArea .sign-up span.error {
+        position: absolute;
+        width: 47%;
+        text-align: right;
+        left: 50%;
+        margin-top: 4px;
+        padding-right: 3%;
+        color: red;
+        font-family: "bebas_neuebold", "Arial Black", Helvetica, Arial, sans-serif, Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, Droid Sans Fallback, -apple-system, ".SFNSDisplay-Regular", Heiti SC, Microsoft Yahei, Segoe UI;
+        font-size: 14px;
+        font-size: 0.875rem; }
+    .loginBlock .loginArea .login img {
+      width: 88%; }
+    .loginBlock .loginArea .login input {
+      width: 100%;
+      padding: 7px 18px;
+      margin-bottom: 20px;
+      border: 1px solid #eceded;
+      font-size: 14px;
+      font-size: 0.875rem; }
+  .loginBlock .background-shadow, .loginBlock .closeBtn {
+    display: none; }
+
+#loginPopup {
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: none; }
+  #loginPopup .background-shadow, #loginPopup .closeBtn {
+    display: block; }
+  #loginPopup .background-shadow {
+    position: fixed;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); }
+  #loginPopup .loginBlock {
+    background: none;
+    border-bottom: none; }
+    #loginPopup .loginBlock .center {
+      max-width: 600px;
+      background: #eceded;
+      position: relative;
+      top: 40px;
+      z-index: 7; }
+    #loginPopup .loginBlock .whysignup {
+      display: none; }
+    #loginPopup .loginBlock .sign-up {
+      width: 48%;
+      margin-right: 4%; }
+    #loginPopup .loginBlock .login {
+      width: 48%; }
+    #loginPopup .loginBlock .closeBtn a {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      font-size: 24px;
+      font-size: 1.5rem;
+      background: #eceded;
+      border-radius: 50px;
+      padding: 6px; }
+
+/* all media sections */
+.media-filters {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: block;
+  background: #fdfcfc;
+  overflow: hidden;
+  border-bottom: 1px solid #B003F1;
+  border-top: 1px solid #eceded;
+  -webkit-box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.7); }
+  .media-filters .right {
+    float: right;
+    padding: 9px;
+    padding: 0.5625rem; }
+    .media-filters .right input {
+      font-size: 20px;
+      font-size: 1.25rem;
+      padding: 8px;
+      padding: 0.5rem;
+      margin-bottom: 0px;
+      height: 43px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      -webkit-border-top-right-radius: 0px;
+      -webkit-border-bottom-right-radius: 0px;
+      -moz-border-top-right-radius: 0px;
+      -moz-border-bottom-right-radius: 0px;
+      border: 1px solid #039EF1; }
+    .media-filters .right select {
+      height: 43px;
+      vertical-align: top;
+      padding: 10px 3px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 0px; }
+    .media-filters .right select:focus {
+      font-size: 14px;
+      font-size: 0.875rem; }
+  .media-filters .left {
+    float: left; }
+    .media-filters .left li {
+      display: inline-block; }
+      .media-filters .left li a {
+        display: inline-block;
+        padding: 18px 12px;
+        border-right: #eceded 1px solid;
+        font-size: 15px;
+        font-size: 0.9375rem; }
+      .media-filters .left li a:hover {
+        box-shadow: -7px -15px 0px -9px #039EF1 inset; }
+    .media-filters .left span.activebuttons li:last-child a {
+      border-right: none; }
+
+.media-section {
+  background: #eceded;
+  position: relative; }
+  .media-section #addMore {
+    visibility: hidden; }
+  .media-section .col1, .media-section .col2, .media-section .col3 {
+    width: 32%;
+    margin-top: 30px; }
+  .media-section .ad {
+    display: inline-block;
+    width: 100%; }
+    .media-section .ad .media-item {
+      border: 8px solid #ab0c81; }
+      .media-section .ad .media-item .ad-image {
+        position: absolute;
+        width: 100px;
+        top: -40px;
+        right: -40px;
+        z-index: 5;
+        border: none; }
+      .media-section .ad .media-item .image {
+        border: none;
+        border-top: 5px solid #fdfcfc;
+        border-left: 5px solid #fdfcfc;
+        border-right: 5px solid #fdfcfc; }
+      .media-section .ad .media-item div.info {
+        border-bottom: 5px solid #fdfcfc;
+        border-left: 5px solid #fdfcfc;
+        border-right: 5px solid #fdfcfc; }
+  .media-section .media-item-list {
+    display: inline-block;
+    width: 100%; }
+  .media-section .media-item {
+    display: inline-block;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    box-sizing: border-box;
+    border: 8px solid #fdfcfc;
+    background: #fdfcfc;
+    margin-left: 0px;
+    margin-bottom: 35px;
+    z-index: 0;
+    position: relative; }
+    .media-section .media-item .image {
+      width: 100%;
+      max-height: 320px;
+      min-height: 200px;
+      overflow: hidden;
+      position: relative;
+      border: #eceded 1px solid;
+      box-sizing: border-box; }
+      .media-section .media-item .image img {
+        visibility: hidden; }
+      .media-section .media-item .image a {
+        position: absolute; }
+    .media-section .media-item h3.title {
+      font-family: "bebas_neuebold", "Arial Black", Helvetica, Arial, sans-serif, Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, Droid Sans Fallback, -apple-system, ".SFNSDisplay-Regular", Heiti SC, Microsoft Yahei, Segoe UI;
+      font-size: 70px;
+      font-size: 4.375rem;
+      position: absolute; }
+    .media-section .media-item .prepara {
+      height: 50px;
+      overflow: hidden;
+      color: #121312; }
+    .media-section .media-item div.info {
+      background: #fdfcfc; }
+      .media-section .media-item div.info span {
+        display: inline-block;
+        height: 24px;
+        padding: 3px 0; }
+        .media-section .media-item div.info span img {
+          display: inline;
+          width: 25px;
+          border: none;
+          margin-top: none; }
+        .media-section .media-item div.info span p, .media-section .media-item div.info span a {
+          display: inline;
+          font-size: 12px;
+          font-size: 0.75rem;
+          top: -8px;
+          position: relative; }
+      .media-section .media-item div.info .right {
+        margin-left: 10px;
+        float: right; }
+      .media-section .media-item div.info .left {
+        float: left; }
+    .media-section .media-item img {
+      width: 100%;
+      border: 1px solid #121312;
+      display: block; }
+
+/* Featured Area */
+.intro {
+  padding: 40px 0; }
+  .intro .background {
+    position: absolute;
+    z-index: 0;
+    max-width: 2300px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%); }
+    .intro .background img {
+      width: 100%; }
+
+.welcome {
+  position: relative;
+  z-index: 1;
+  padding: 30px 0 30px 0;
+  height: 740px;
+  border-bottom: 5px solid #B003F1; }
+  .welcome h2 {
+    position: absolute;
+    top: 80%;
+    left: -5px;
+    text-indent: 60px;
+    background: #fdfcfc;
+    color: #121312;
+    border: 5px solid #B003F1;
+    padding: 20px;
+    padding: 1.25rem;
+    font-family: 'Pacifico', cursive; }
+
+.featured {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  padding: 40px 40px;
+  box-sizing: border-box;
+  background: url("featured-bg.png") #121312 no-repeat;
+  background-position: bottom;
+  -webkit-box-shadow: 0px 9px 15px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 9px 15px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 9px 15px 0px rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 1; }
+  .featured h3 {
+    color: #fdfcfc;
+    font-weight: bold;
+    text-align: center;
+    font-size: 70px;
+    font-size: 4.375rem;
+    margin-bottom: 20px; }
+  .featured h4 {
+    color: #039EF1;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    font-size: 1.875rem;
+    margin-bottom: 10px; }
+  .featured .discussions {
+    float: left;
+    width: 64%;
+    margin-right: 3%; }
+    .featured .discussions .media-item {
+      padding: 20px 0;
+      border-bottom: 1px solid #eceded; }
+      .featured .discussions .media-item .readmore {
+        text-align: center;
+        display: block; }
+      .featured .discussions .media-item .discus img {
+        float: left;
+        width: 30%;
+        margin-right: 3%; }
+      .featured .discussions .media-item .discus p {
+        float: left;
+        width: 67%; }
+    .featured .discussions .media-item:last-child {
+      border-bottom: none; }
+  .featured .gallary {
+    float: right;
+    width: 32%;
+    margin-top: 20px; }
+    .featured .gallary .image {
+      width: 100%;
+      height: 235px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      position: relative; }
+      .featured .gallary .image a {
+        background: #121312;
+        position: absolute;
+        padding: 10px;
+        padding: 0.625rem;
+        font-family: "bebas_neuebold", "Arial Black", Helvetica, Arial, sans-serif, Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, Droid Sans Fallback, -apple-system, ".SFNSDisplay-Regular", Heiti SC, Microsoft Yahei, Segoe UI;
+        font-size: 40px;
+        font-size: 2.5rem;
+        font-weight: bold; }
+
+.user-profile .media-section {
+  padding-top: 40px; }
+
+.media-section .media-item {
+  border: none;
+  background: #fdfcfc;
+  padding: 10px;
+  box-shadow: none; }
+  .media-section .media-item .image {
+    max-height: 500px; }
+
+/*# sourceMappingURL=stylesheet.css.map */

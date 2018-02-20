@@ -1,0 +1,15 @@
+mixin featured()
+	div.featured.cf
+		h3 Featured
+		div.discussions
+			div.media-item.cf(ng-repeat="item in featured | limitTo: 5" ng-if="item.posts_featured == 'true'")
+				a.title(href="javascript:void(0)") 
+					h4 {{item.posts_name}}
+				div.discus.cf
+					img(ng-src="{{item.posts_img}}") 
+					p {{item.posts_paragraph}}
+				a.readmore(href="javascript:void(0)") Read More
+		div.gallary
+			div.media-item(ng-repeat="item in featured " ng-if="item.posts_featured == 'true'")
+				div.image(style="background: url('{{item.posts_img}}'); background-size: cover;")
+					a.title(href="javascript:void(0)", style="top: {{item.posts_y}}%; left: {{item.posts_x}}%;") {{item.posts_name}}

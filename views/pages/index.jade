@@ -1,0 +1,18 @@
+include ../partials/media-filters.jade
+include ../partials/intro.jade
+include ../partials/login.jade
+include ../partials/media-mid.jade
+
+block page
+	-if(sessEmail == null) {
+		+intro()
+		+login()
+		+media-filters
+		+media-mid()
+	- } else {
+		+media-filters
+		div.midscreen
+			+media-mid()
+	- }
+	div#loginPopup
+		+login()

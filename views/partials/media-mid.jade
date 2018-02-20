@@ -1,0 +1,28 @@
+mixin media-mid()
+	div.media-section.media-all.col-3
+		div.center.cf
+			div(ng-repeat="cols in columns")
+				div(class="col{{cols.colnum}}")
+					div.media-item-list(ng-repeat="item in media  | filter: query | filter: filters | filter: ads | limitTo: limit | orderBy: sort:false" ng-if="$index % 3 == cols.colnum-1")
+						div.media-item
+							div.image(style="background:url('{{item.posts_img}}') no-repeat center; background-size: cover; ")
+								img(ng-src="{{item.posts_img}}")
+								h3.title(style="top: {{item.posts_y}}%; left: {{item.posts_x}}%;") {{item.posts_name}}
+							div.info.cf
+								div.cf
+									span.left
+										a(href="#") {{item.posts_section}}
+									span.left
+										img(src="icon-person.png")
+										a(href="/{{item.users_username | slugify}}", target="_self") {{item.users_username}}
+									span.right
+										img(src="icon-comment.png")
+										p  {{item.posts_comments}}
+									span.right
+										img(src="icon-love.png")
+										p  {{item.posts_love}}
+						div.ad(ng-if="$index % 11 == 0 && $index < 33")
+							div.media-item
+								img.ad-image(src="cloud.png")
+								div(google-adsense)
+			a#addMore(href="javascript:void(0)" ng-click="incrementLimit()") more

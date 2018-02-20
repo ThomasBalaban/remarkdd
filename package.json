@@ -1,0 +1,33 @@
+{
+  "name": "remarkdd",
+  "version": "2.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "MD5": "~1.3.0",
+    "bcrypt-nodejs": "latest",
+    "body-parser": "^1.15.2",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "^1.0.0",
+    "express": "^4.14.0",
+    "express-mysql-session": "^1.2.0",
+    "express-session": "^1.0.0",
+    "jade": "^1.11.0",
+    "lodash": "^4.14.0",
+    "method-override": "^2.3.6",
+    "mysql": "^2.12.0",
+    "node-uuid": "^1.4.7",
+    "passport": "~0.3.2",
+    "passport-facebook": "~2.1.1",
+    "passport-google-oauth": "~1.0.0",
+    "passport-local": "~1.0.0",
+    "passport-twitter": "~1.0.2",
+    "serve-favicon": "^2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Balaban",
+  "license": "ISC",
+  "description": ""
+}

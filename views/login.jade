@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	p welcome: #{ sessEmail }
+	p login err: #{ logInError }
+	+login()
+	//if( sessEmail == null )
+		h2 Login
+		form(action='/login' method='post')
+			label email
+			input(type='text' name='email')
+			label password
+			input(type='password' name='password')
+			input(type='submit' value='submit')
+	//h2 signup
+	//div
+		form(action='/api/iamjustarobot/users', method='post')
+			span email
+			input(id='email', type='text', value='', name='email')
+			span password
+			input(id='password', type='text', value='', name='password')
+			input(type='submit', value='sign up')

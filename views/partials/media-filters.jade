@@ -1,0 +1,21 @@
+mixin media-filters()
+	div.media-filters.cf(media-filters)
+		div.center
+			div.left
+				ul.media-selection
+					span.popornot
+						li(ng-click="new(); top(); popOrNot($event)") 
+							a(href="#") New
+						li(ng-click="popular(); top(); popOrNot($event)")
+							a(class="active" href="#") Popular
+					span.activebuttons
+						li(ng-click="clearFilter(); top(); actives($event)") 
+							a(class="active" href="#") All Posts
+						li(ng-repeat="types in sectionsTypes" ng-click="filters.posts_section = types.section; top(); actives($event)")
+							a(href="#") {{ types.section }}
+			div.right
+				input(type="text", ng-model="query[queryBy]",  placeholder='Search')          
+				select(ng-model="queryBy")
+					option(value="$") All Data
+					option(value="posts_name") Name
+					option(value="users_username") User

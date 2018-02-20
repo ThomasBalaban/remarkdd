@@ -1,0 +1,298 @@
+body, html {
+	height: 101%;
+}
+
+body {
+	font-size: 18px;
+	background: $background;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $fontHeading;
+	text-rendering: optimizeLegibility;
+	color: $headingText;
+	font-weight: bold;
+	@include fontSize(32px);
+}
+
+form {
+	position: relative;
+}
+
+input, select, option, label, input:focus, select:focus, option:focus {
+	font-family: $fontText;
+	@include fontSize(20px);
+	letter-spacing: 1px;
+	padding: 2px 7px;
+	border: none;
+	outline: none;
+	@extend %roundedBorders;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+}
+
+select, option, input[type='submit'] {
+	background: $blue;
+	letter-spacing: 1px;
+	color: $white;
+	@include fontSize(14px);
+}
+
+input[type='submit'] {
+	padding: 3px;
+	min-width: 110px;
+    min-height: 40px;
+    @extend %roundedBorders;
+}
+
+input[type='password'], input[type='text'], input[type='email'] {
+	border: 1px solid #fff;
+	margin-bottom: 5px;
+	@extend %roundedBorders;
+}
+
+select:hover, option:focus, input[type='submit']:focus {
+	background: $yellow;
+}
+
+
+p, span, a, li {
+	font-family: $fontText;
+	@include fontSize(16px);
+	@include lineHeight(25px);
+	text-align: justify;
+	letter-spacing: 1px;
+}
+
+p, span, li {
+	color: $black;
+}
+
+a {
+	color: $blue;
+}
+
+h1 {
+	font-family: 'Pacifico', cursive;
+	@include fontSize(68px);
+	font-weight: 500;
+}
+
+h2 {
+	@include fontSize(65px);
+}
+
+.btn-signup, .btn-login{
+	background: $blue;
+	background: -webkit-radial-gradient(#0f352e, #0b5136);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+a.btn {
+	color: #fff;
+	border: 2px solid #d47bf5;
+	box-sizing: border-box;
+	padding: 10px 25px;
+	@include fontSize(20px);
+	@extend %roundedBorders;
+}
+
+.btn-signup {
+	border-right: 2px solid $blue;
+	padding-right: 10px;
+}
+
+.btn-login {
+	padding-left: 10px;
+}
+
+.btn-signup, .btn-login {
+	@include fontSize(26px);
+	display: inline-block;
+	height: 28px;
+	margin-bottom: 8px;
+}
+
+body {
+	.main-content {
+		padding-top: 88px;
+	}
+}
+
+header {
+	z-index: 3;
+	position: fixed;
+	width: 100%;
+	padding: 2px 0;
+	overflow: hidden;
+	background: $purple url('top-r.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	box-sizing: border-box;
+	//@include box-shadow(0px, 5px, 5px, rgba(0, 0, 0, 0.5));
+	.header {
+		max-width: 1600px;
+		margin: 0 auto;
+		padding: 0 40px;
+		.remarkdd {
+			float: left;
+			img {
+				display: inline-block;
+				padding: 5px 0 2px 0;
+				height: 70px;
+			}
+		}
+		h1 {
+			margin: 0 auto;
+    		width: 315px;
+			color: $white;
+			top: 4px;
+    		position: relative;
+		}
+		ul {
+			float: right;
+			> li {
+				float: left;
+				a {
+					@include fontSize(16px);
+					padding: 8px 15px;
+					display: inline-block;
+					@include lineHeight(44px);
+				}
+				ul {
+					display: none;
+				}
+			}
+			> li:hover {
+				background: $grey;
+				a {
+					color: $yellow;
+				}
+				ul {
+					display: block;
+					position: absolute;
+					background: $background;
+					@include paddings(10px);
+					li {
+						display: block;
+					}
+					a {
+						color: $blue;
+					}
+					li:hover {
+						background: $grey;
+						a {
+							color: $yellow;
+						}
+					}
+				}
+			}
+			> li:hover ul.last {
+				right: 300px;
+				text-align: right;
+				padding: 0px;
+				border: 1px solid $grey;
+				margin-top: 1px;
+				> a {
+					display: none;
+				}
+				li {
+					a {
+						display: none;
+					}
+					a.link {
+						display: block;
+						@include lineHeight(46px);
+					}
+				}
+			}
+		}
+		div.loggedout {
+			float: right;
+			padding: 6px 0px;
+			margin-top: 10px;
+			h3 {
+				display: inline-block;
+				top: 14px;
+				@include fontSize(51px);
+				@include lineHeight(19px);
+				position: relative;
+			}
+			a {
+				margin-top: 10px;
+			}
+			a:first-child {
+				margin-right: 20px;
+			}
+			.navlogin {
+
+			}
+			.navsignup {
+				background: #8e06c1;
+			}
+		}
+	}
+}
+
+
+.col-1 {
+	.col1{
+		width: 100%;
+		margin-right: 0px;
+	}
+}
+
+.col-2 {
+	.col1, .col2 {
+		width: 49%;
+		margin-right: 2%;
+		float: left;
+	}
+
+	.col2 {
+		margin-right: 0px;
+	}
+}
+
+.col-3 {
+	.col1, .col2, .col3 {
+		width: 32%;
+		margin-right: 2%;
+		float: left;
+	}
+
+	.col3 {
+		margin-right: 0px;
+	}
+}
+
+.center {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 40px;
+}
+
+@media only screen and (min-width: 1280px) {
+	.tablet, .mobile {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.tablet {
+		display: block;
+	}
+	.fullscreen, .midscreen, .mobile {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.mobile {
+		display: block;
+	}
+	.fullscreen, .midscreen, .tablet {
+		display: none;
+	}
+}

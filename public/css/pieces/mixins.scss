@@ -1,0 +1,25 @@
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+@mixin lineHeight($size) {
+  line-height: $size; //Fallback in px
+  line-height: calculateRem($size);
+}
+
+@mixin paddings($size) {
+  padding: $size; //Fallback in px
+  padding: calculateRem($size);
+}
+
+@mixin margins($size) {
+  margin: $size; //Fallback in px
+  margin: calculateRem($size);
+}
+
+@mixin box-shadow($top, $left, $blur, $color) {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+}

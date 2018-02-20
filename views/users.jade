@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	if(userName != null )
+		p #{userName}
+	div(ng-view)
+		block page

@@ -1,0 +1,26 @@
+mixin navigation()
+	if(sessEmail != null)
+		ul.loggedin
+			li
+				a(href="/profile", target="_self") profile
+			li
+				a(href="/messagecenter", target="_self") Message Center
+			li
+				a(href="/settings", target="_self") Settings
+					ul.last
+						li
+							a.link(href="/preferences", target="_self") Preferences
+						li
+							a.link(href="/account-settings", target="_self") Account Settings
+						li
+							a.link(href="/privacy", target="_self") Privacy
+						li
+							a.link(href="/subscriptions", target="_self") Subscriptions
+						li
+							a.link(href="/partner-settings", target="_self") Partner Settings
+			li
+				a(href="/logout" target="_self") Logout
+	else
+		div.loggedout
+			a.btn.navlogin(href="javascript:void(0)") Login
+			a.btn.navsignup(href="javascript:void(0)") Sign-up

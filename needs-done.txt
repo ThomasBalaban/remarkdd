@@ -1,0 +1,33 @@
+---------------------
+Pre-release
+---------------------
+- final design
+- mobile
+- anon login
+- fix ads 
+- set up submit feature
+- set up auto image
+- contact me section (email for ad placement (I will do myself) )
+- Terms and conditions with signup
+- Send email to verify 
+- Direct messaging
+---------------------
+colors
+-
+http://www.bodeanimation.com/blog/wp-content/uploads/2013/07/Colorwheel.png
+
+Purple on science Ads
+Green or purple on entry 
+Red on Health, local
+Blue on News, Politics, Technology
+Orange on Music, Games, Movies
+Yellow on Funny
+
+64C3FF
+f90f86
+FBCA3C
+0F92C0 > 23ADDE
+AE23DE
+B003F1
+039EF1
+F19703
